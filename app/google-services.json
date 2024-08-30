@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "541571407327",
+    "project_id": "viechat-project",
+    "storage_bucket": "viechat-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541571407327:android:dce78afac30911de24386a",
+        "android_client_info": {
+          "package_name": "com.company.viechatt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW7OCDeUFxmQOrVr-Et3SeYRXRhtGnYFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541571407327:android:0d91d43e5dcbdafc24386a",
+        "android_client_info": {
+          "package_name": "com.example.viechat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW7OCDeUFxmQOrVr-Et3SeYRXRhtGnYFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
