@@ -11,13 +11,18 @@
             android:title="Trang chủ"
             android:icon="@drawable/ic_baseline_home_24"/>
         <item
-            android:id="@+id/nav_search"
-            android:title="Tìm kiếm bạn bè"
+            android:id="@+id/nav_profile"
+            android:title="Trang cá nhân"
             android:icon="@drawable/ic_baseline_person_24"/>
+
         <item
             android:id="@+id/nav_group"
             android:title="Tạo nhóm trò chuyện"
             android:icon="@drawable/ic_baseline_group_24"/>
+        <item
+            android:id="@+id/nav_search"
+            android:title="Tìm kiếm bạn bè"
+            android:icon="@drawable/ic_baseline_person_24"/>
         <item
             android:id="@+id/nav_list"
             android:title="Danh sách bạn bè"

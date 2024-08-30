@@ -92,35 +92,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         Log.d("UserInfo", "User data not found!");
 
-
-        if (currentUser != null){
-            String userId = currentUser.getUid();
-
-            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
-
-            reference.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if (snapshot.exists()) {
-                        User user = snapshot.getValue(User.class);
-                        if (user != null) {
-                            tvName.setText(user.getName());
-                            email.setText(user.getEmail());
-
-                        }
-                        Log.d("UserInfo", "User data not found!");
-                    } else {
-                        Log.d("UserInfo", "User data not found!");
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-
-        }
+        //xu li
     }
 
     private void init(){
@@ -154,6 +126,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                     if (itemId == R.id.nav_home){
                         Intent profileIntent = new Intent(getApplicationContext(), HomeActivity.class);
+                        startActivity(profileIntent);
+                        return true;
+                    }
+                    if (itemId == R.id.nav_profile)
+                    {
+                        Intent profileIntent = new Intent(getApplicationContext(), ProfileActivity.class);
                         startActivity(profileIntent);
                         return true;
                     }

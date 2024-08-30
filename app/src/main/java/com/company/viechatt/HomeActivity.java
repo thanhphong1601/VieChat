@@ -115,6 +115,12 @@ public class HomeActivity extends AppCompatActivity implements UserAdapter.OnUse
                         finish();
                         return true;
                     }
+                    if (itemId == R.id.nav_profile)
+                    {
+                        Intent profileIntent = new Intent(getApplicationContext(), ProfileActivity.class);
+                        startActivity(profileIntent);
+                        return true;
+                    }
                 } catch (Exception e){
                     throw new RuntimeException(e);
                 }
