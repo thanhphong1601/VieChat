@@ -99,7 +99,7 @@ public class HomeActivity extends AppCompatActivity implements UserAdapter.OnUse
                 try {
                     int itemId = item.getItemId();
                     if (itemId == R.id.nav_search){
-                        Intent profileIntent = new Intent(getApplicationContext(), TestActivity.class);
+                        Intent profileIntent = new Intent(getApplicationContext(), SearchActivity.class);
                         startActivity(profileIntent);
                         return true;
                     }
@@ -113,12 +113,6 @@ public class HomeActivity extends AppCompatActivity implements UserAdapter.OnUse
                         Intent loginIntent = new Intent(getApplicationContext(), LoginActivity.class);
                         startActivity(loginIntent);
                         finish();
-                        return true;
-                    }
-                    if (itemId == R.id.nav_profile)
-                    {
-                        Intent profileIntent = new Intent(getApplicationContext(), ProfileActivity.class);
-                        startActivity(profileIntent);
                         return true;
                     }
                 } catch (Exception e){

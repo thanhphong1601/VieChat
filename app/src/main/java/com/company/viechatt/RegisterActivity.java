@@ -22,7 +22,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText editTxtEmail, editTxtPassword, editTxtConfirmPassword, editName;
@@ -67,6 +70,11 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
+                if (password.length() < 6){
+                    Toast.makeText(RegisterActivity.this, "Mật khẩu phải từ 6 chữ số", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)){
                     Toast.makeText(RegisterActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                     return;
@@ -83,7 +91,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             String userId = firebaseUser.getUid();
 
                                             // Tạo đối tượng User
-                                            User user = new User(id ,name, email, password);
+                                            User user = new User(id ,name, email, password, "offline");
 
                                             // Thêm vào Realtime Database
                                             FirebaseDatabase.getInstance().getReference("Users")
@@ -133,4 +141,6 @@ public class RegisterActivity extends AppCompatActivity {
             finish();
         }
     }
+
+
 }

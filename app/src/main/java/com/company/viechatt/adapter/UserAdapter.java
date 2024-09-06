@@ -1,7 +1,6 @@
 package com.company.viechatt.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.company.viechatt.R;
-import com.company.viechatt.TestActivity;
 import com.company.viechatt.model.User;
 
 import java.util.List;
@@ -21,11 +19,18 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     static Context context;
     private List<User> userList;
     private OnUserClickListener onUserClickListener;
+    boolean isChat;
 
 
     public UserAdapter(List<User> userList, OnUserClickListener onUserClickListener) {
         this.userList = userList;
         this.onUserClickListener = onUserClickListener;
+    }
+
+    public UserAdapter(Context context, List<User> userlist, boolean isChat) {
+        this.context = context;
+        this.userList = userlist;
+        this.isChat = isChat;
     }
 
     @NonNull

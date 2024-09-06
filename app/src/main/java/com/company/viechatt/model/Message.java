@@ -4,6 +4,7 @@ public class Message {
     private String message;
     private String senderId;
     private String receiverId;
+    private String imageUrl;
 
     public Message(){}
 

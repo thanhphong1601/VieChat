@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "541571407327",
+    "firebase_url": "https://viechat-project-default-rtdb.firebaseio.com",
     "project_id": "viechat-project",
     "storage_bucket": "viechat-project.appspot.com"
   },
@@ -10,6 +11,25 @@
         "mobilesdk_app_id": "1:541571407327:android:dce78afac30911de24386a",
         "android_client_info": {
           "package_name": "com.company.viechatt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW7OCDeUFxmQOrVr-Et3SeYRXRhtGnYFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541571407327:android:5f8e44c27f4d873e24386a",
+        "android_client_info": {
+          "package_name": "com.detai8.viechatapp"
         }
       },
       "oauth_client": [],

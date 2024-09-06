@@ -1,60 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileActivity">
 
-    <Button
-        android:id="@+id/btn_back"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@drawable/ic_baseline_arrow_back_24"
-        tools:ignore="MissingConstraints"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="50dp"/>
 
-    <LinearLayout
+
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_height="wrap_content">
 
 
-        <!-- Avatar -->
-        <com.mikhaellopez.circularimageview.CircularImageView
-            android:id="@+id/profile_avatar"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:src="@drawable/hehe"
-            android:contentDescription="Avatar"
-            android:layout_marginBottom="16dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <!-- User Name -->
-        <TextView
-            android:id="@+id/profile_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:layout_marginBottom="8dp"
-            android:text="Name"/>
-
-        <!-- User Email -->
-        <TextView
-            android:id="@+id/profile_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"
-            android:text="email"/>
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/user"
+                app:civ_border_color="@android:color/black"
+                app:civ_border_width="1dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/profile_image"/>
 
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image"
+                android:layout_margin="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="User Name"
+                android:textSize="20sp"
+                android:id="@+id/username_profile"
+                android:textStyle="bold"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

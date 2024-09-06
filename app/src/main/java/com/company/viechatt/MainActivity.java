@@ -2,12 +2,9 @@ package com.company.viechatt;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -17,19 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.company.viechatt.model.User;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar actionBar;
@@ -67,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         init();
-        initProfile();
+        //initProfile();
 
 
 
@@ -85,15 +72,43 @@ public class MainActivity extends AppCompatActivity {
 //        });
     }
 
-    private void initProfile() {
-        TextView tvName = findViewById(R.id.name);
-        TextView email = findViewById(R.id.email);
-
-        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        Log.d("UserInfo", "User data not found!");
-
-        //xu li
-    }
+//    private void initProfile() {
+//        TextView tvName = findViewById(R.id.name);
+//        TextView email = findViewById(R.id.email);
+//
+//        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+//        Log.d("UserInfo", "User data not found!");
+//
+//
+//        if (currentUser != null){
+//            String userId = currentUser.getUid();
+//
+//            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
+//
+//            reference.addValueEventListener(new ValueEventListener() {
+//                @Override
+//                public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                    if (snapshot.exists()) {
+//                        User user = snapshot.getValue(User.class);
+//                        if (user != null) {
+//                            tvName.setText(user.getName());
+//                            email.setText(user.getEmail());
+//
+//                        }
+//                        Log.d("UserInfo", "User data not found!");
+//                    } else {
+//                        Log.d("UserInfo", "User data not found!");
+//                    }
+//                }
+//
+//                @Override
+//                public void onCancelled(@NonNull DatabaseError error) {
+//
+//                }
+//            });
+//
+//        }
+//    }
 
     private void init(){
 
@@ -120,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     int itemId = item.getItemId();
                     if (itemId == R.id.nav_search){
-                        Intent profileIntent = new Intent(getApplicationContext(), TestActivity.class);
+                        Intent profileIntent = new Intent(getApplicationContext(), SearchActivity.class);
                         startActivity(profileIntent);
                         return true;
                     }
@@ -129,10 +144,11 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(profileIntent);
                         return true;
                     }
-                    if (itemId == R.id.nav_profile)
-                    {
-                        Intent profileIntent = new Intent(getApplicationContext(), ProfileActivity.class);
-                        startActivity(profileIntent);
+                    if (itemId == R.id.logout){
+                        auth.signOut();
+                        Intent loginIntent = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(loginIntent);
+                        finish();
                         return true;
                     }
                 } catch (Exception e){

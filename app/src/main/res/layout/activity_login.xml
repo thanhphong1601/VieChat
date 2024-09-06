@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Login"
+        android:text="Đăng nhập"
         android:textAlignment="center"
         android:textSize="48sp"
         android:textStyle="bold" />
@@ -37,7 +37,7 @@
         android:background="@color/white"
         android:backgroundTint="#DED5D5"
         android:contentDescription="Please enter your email"
-        android:hint="Enter email"
+        android:hint="Nhập email..."
         android:paddingLeft="10sp"
         android:textColor="@color/black"
         android:textColorHint="#404040"
@@ -52,7 +52,7 @@
         android:layout_marginRight="20sp"
         android:background="@color/white"
         android:backgroundTint="#DED5D5"
-        android:hint="Enter password"
+        android:hint="Nhập mật khẩu..."
         android:inputType="textPassword"
         android:paddingLeft="10sp"
         android:textColor="@color/black"
@@ -71,7 +71,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:checked="false"
-            android:text="Show password"
+            android:text="Hiện mật khẩu"
             android:textColor="@color/black"
             android:textSize="16dp" />
 
@@ -83,23 +83,23 @@
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
-            android:text="Sign In" />
+            android:text="Đăng nhập" />
 
 
         <Button
             android:id="@+id/btnRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="40dp"
             android:gravity="center"
-            android:text="Register" />
+            android:text="Đăng ký" />
 
     </RelativeLayout>
 

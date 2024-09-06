@@ -5,18 +5,25 @@ public class User {
     private String name;
     private String email;
     private String password;
-    private boolean isOnline;
-//    private List<Post> userPosts;
+    private String status;
+    private String imageURL;
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
 
     public User(){}
 
-    public User(String userId, String name, String email, String password) {
+    public User(String userId, String name, String email, String password, String status) {
         this.userId = userId;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.isOnline = false;
-        //this.userPosts = new ArrayList<>();
+        this.status = status;
     }
 
 
@@ -52,13 +59,14 @@ public class User {
         this.password = password;
     }
 
-    public boolean isOnline() {
-        return isOnline;
+    public String getStatus() {
+        return status;
     }
 
-    public void setOnline(boolean online) {
-        isOnline = online;
+    public void setStatus(String status) {
+        this.status = status;
     }
+
 
 //    public List<Post> getUserPosts() {
 //        return userPosts;

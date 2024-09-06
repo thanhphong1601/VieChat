@@ -1,2 +1,2 @@
-# VieChat
-An Online Chatting Android App
+# VieChatPH
+Phát triển ứng dụng di động để chat

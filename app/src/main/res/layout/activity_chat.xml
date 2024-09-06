@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8F5EB0DC"
+    android:background="#8FAAE1FF"
     tools:context=".ChatActivity">
 
     <ImageButton
@@ -42,17 +42,28 @@
             android:id="@+id/tv_receiverName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ayushvishwakarma"
+            android:text="name"
             android:gravity="center"
             android:textColor="@color/black"
             android:textSize="25dp"
             android:layout_margin="10dp"
-            android:background="#878787"/>
+            android:background="#C5C5C5"/>
+
+        <TextView
+            android:id="@+id/tv_receiver_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_marginBottom="4dp"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:background="#B1B1B1"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/black"/>
+            android:background="@color/black"
+            android:layout_margin="2dp"/>
     </LinearLayout>
 
 
@@ -65,24 +76,28 @@
         android:layout_below="@+id/ll1"
         android:layout_marginTop="7dp"
         android:layout_marginBottom="-7dp"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:background="#C6EFEF"/>
+
+
 
     <LinearLayout
         android:id="@+id/ll2"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
+
+        android:orientation="horizontal"
+        android:background="#BCB8B8">
+
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="7dp"
             android:layout_marginEnd="7dp"
             android:layout_weight="1"
             app:cardBackgroundColor="@color/white"
@@ -99,6 +114,22 @@
                 android:paddingStart="13.00dp" />
 
         </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/button_select_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="#BFBFBF"
+            android:src="@drawable/ic_baseline_broken_image_24" />
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="gone"/>
 
         <Button
             android:id="@+id/btn_send"

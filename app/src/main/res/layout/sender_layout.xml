@@ -27,10 +27,11 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="5dp"
         android:layout_toLeftOf="@id/profileSender"
-        android:background="#898989"
+        android:background="#C7C7C7"
         android:padding="7dp"
         android:text="aysuhvish"
         android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
 </RelativeLayout>

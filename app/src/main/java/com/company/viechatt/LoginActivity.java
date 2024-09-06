@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 progressbar.setVisibility(View.VISIBLE);
                 String email, password;
-                email = editTxtEmail.getText().toString();//Cái nào cũng đc
+                email = editTxtEmail.getText().toString();
                 password = String.valueOf(editTxtPassword.getText());
 
                 if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)){
@@ -79,12 +79,12 @@ public class LoginActivity extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(LoginActivity.this, "Đăng nhập thành công",
                                                 Toast.LENGTH_SHORT).show();
-                                        Intent homeIntent = new Intent(LoginActivity.this, MainActivity.class); //fix here
+                                        Intent homeIntent = new Intent(LoginActivity.this, HomeActivity.class); //fix here
                                         startActivity(homeIntent);
                                         finish();
 //                                        FirebaseUser user = mAuth.getCurrentUser();
                                     } else {
-                                        Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                        Toast.makeText(LoginActivity.this, "Có lỗi xảy ra. Hãy thử lại!",
                                                 Toast.LENGTH_SHORT).show();
                                     }
                                 }
@@ -110,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            Intent homeIntent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent homeIntent = new Intent(getApplicationContext(), HomeActivity.class);
             startActivity(homeIntent);
             finish();
         }

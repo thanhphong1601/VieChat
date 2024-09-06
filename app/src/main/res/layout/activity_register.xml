@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Register"
+        android:text="Đăng ký"
         android:textAlignment="center"
         android:textSize="48sp"
         android:textStyle="bold" />
@@ -26,7 +26,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="50dp"
         android:background="#DED5D5"
-        android:hint="Enter Email"
+        android:hint="Email"
         android:paddingLeft="10sp"
         android:textColor="@color/black"
         android:textColorHint="#404040"
@@ -39,7 +39,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:background="#DED5D5"
-        android:hint="Enter Your Name"
+        android:hint="Họ tên"
         android:paddingLeft="10sp"
         android:singleLine="true"
         android:textColor="@color/black"
@@ -53,12 +53,13 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:background="#DED5D5"
-        android:hint="Enter Pasword"
+        android:hint="Mật khẩu"
         android:paddingLeft="10sp"
         android:singleLine="true"
         android:textColor="@color/black"
         android:textColorHint="#404040"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:inputType="textPassword"/>
 
 
     <EditText
@@ -68,12 +69,13 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:background="#DED5D5"
-        android:hint="Confirm Pasword"
+        android:hint="Nhập lại mật khẩu"
         android:paddingLeft="10sp"
         android:singleLine="true"
         android:textColor="@color/black"
         android:textColorHint="#404040"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:inputType="textPassword"/>
 
     <!--    <ProgressBar-->
     <!--        android:id="@+id/progressbar"-->
@@ -88,7 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="Register"
+        android:text="Đăng ký"
         android:textSize="18dp" />
 
     <LinearLayout
@@ -111,7 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Login now"
+            android:text="Đăng nhập ngay!"
             android:layout_marginLeft="10dp"
             android:textSize="18dp" />
     </LinearLayout>
